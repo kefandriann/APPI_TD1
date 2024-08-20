@@ -5,7 +5,7 @@ info:
 serveurs:
 	-url: http://localhost.STD23031.com
 paths:
-	/informations:
+	/customers:
 		get:
 			responses:
 				200:
@@ -14,10 +14,10 @@ paths:
 							schema:
 								type: object
 								items:
-									$ref: '#/components/schemas/Customers'
+									$ref: '#/components/schemas/Customer'
 components:
 	schemas:
-		Customers:
+		Customer:
 			type: object
 			properties:
 				name:
