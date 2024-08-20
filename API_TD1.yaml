@@ -1,0 +1,24 @@
+info:
+	nom: STD23031-TD1
+	version: 1.0.0
+serveur:
+	-url: http://localhost.STD23031.com
+paths:
+	/informations
+		get:
+			request:
+				200:
+					application/json
+						schema:
+							type: object
+							items:
+
+components:
+	schema:
+		customers:
+			type: object
+			properties:
+				name:
+					type: string
+				age:
+					type: integer
