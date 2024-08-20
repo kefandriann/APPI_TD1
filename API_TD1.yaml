@@ -1,21 +1,23 @@
+openapi: 3.0.0
 info:
-	nom: STD23031-TD1
+	name: STD23031-TD1
 	version: 1.0.0
-serveur:
+serveurs:
 	-url: http://localhost.STD23031.com
 paths:
-	/informations
+	/informations:
 		get:
-			request:
+			responses:
 				200:
-					application/json
-						schema:
-							type: object
-							items:
-
+    					content:
+						application/json
+							schema:
+								type: object
+								items:
+									$ref: '#/components/schemas/Customers'
 components:
-	schema:
-		customers:
+	schemas:
+		Customers:
 			type: object
 			properties:
 				name:
